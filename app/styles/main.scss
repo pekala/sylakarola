@@ -5,6 +5,7 @@ body {
     font-weight: 300;
     padding: 0;
     margin: 0;
+    padding-bottom: 50px;
 }
 
 .browsehappy {
@@ -17,6 +18,12 @@ body {
 .nav-container {
     text-align: center;
     background: white;
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin-top: 69px;
 }
 
 .clearfix {
@@ -31,6 +38,11 @@ a {
 footer {
     padding: 1em;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.45);
+    z-index: 2;
 }
 
 nav {
@@ -86,17 +98,35 @@ nav {
     display: inline-block;
     overflow: hidden;
     margin: -0.135em;
-    width: 33.333%;
-    height: 315px;
+    width: 25%;
+    height: 40vh;
+    max-height: 640px;
     background: #3085a3;
     text-align: center;
     cursor: pointer;
+    i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 200px;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+figure.opened {
+    i {
+        opacity: 0.6;
+        transition: all 1s ease-in-out;
+        transition-delay: 1s;
+    }
 }
 
 .grid figure img {
     position: relative;
     display: block;
     min-height: 100%;
+    min-width: 100%;
     opacity: 0.8;
 }
 
@@ -181,9 +211,14 @@ figure h2 {
     transform: translate3d(0,20px,0);
 }
 
-figure:hover h2 {
+figure:hover h2, figure.opened h2 {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+}
+
+figure:hover img, figure.opened img {
+    opacity: 0.4;
+    transition: all 0.5s ease-in-out;
 }
 
 figure h2::after {
@@ -206,76 +241,21 @@ figure p {
 }
 
 figure:hover h2::after,
-figure:hover p {
+figure.opened h2::after,
+figure:hover p,
+figure.opened p {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
 
 
-
-
-/* Overlay style */
-.overlay {
-    position: fixed;
-    z-index: 10000;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 2em;
-    background: rgba(255, 255, 255, 0.95);
-}
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    overflow: hidden;
-    border: none;
-    background: url(../images/cross.png) no-repeat center center;
-    text-indent: 200%;
-    color: transparent;
-    outline: none;
-    z-index: 100000;
-}
-
-/* Effects */
-.overlay-hugeinc {
-    opacity: 0;
-    overflow: scroll;
-    visibility: hidden;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-hugeinc.open {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-}
-
-
-.about-photo {
-	float: right;
-	padding: 0;
-	text-align: center;
-	width: 50%;
-	img {
-		width: 100%;
-		max-width: 600px;
-	}
-}
-
-.about-text {
-    font-size: 1.3em;
-    width: 47%;
+.about {
+    font-size: 1.4em;
+    width: 50%;
     float: left;
     text-align: justify;
+    padding-left: 25%;
     p {
         margin-top: 0;
     }
@@ -312,6 +292,20 @@ figure:hover p {
     transition: all 1s;
 }
 
+.page {
+    display: none;
+    margin-left: 27%;
+    figure {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+}
+
+#gallery {
+    font-size: 0;
+}
 
 @media screen and (max-width: 69.5em) {
     .grid figure {

@@ -14,8 +14,11 @@
 
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="../.tmp/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/photoswipe.css">
+        <link rel="stylesheet" type="text/css" href="styles/default-skin/default-skin.css">
         <!-- endbuild -->
 
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,800" rel="stylesheet" type="text/css">
 
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -36,87 +39,106 @@
                 <a href="#">Sewing</a> -->
             </nav>
         </div>
-
+        <main>
         <div class="grid">
         		
-				<figure id="show-about">
+				<figure class="grid-figure" id="about">
                     <img src="images/front/about.jpg">
                     <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
                         <h2>About <span>me</span></h2>
                         <p>Sylwia Karolina Dluzniewska. CV.</p>
                         <a href="#">About</a>
                     </figcaption>           
                 </figure>
  
-                <figure id="gallery-photos">
+                <figure class="grid-figure" id="photos">
                     <img src="images/front/photos.jpg">
                     <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
                         <h2><span>Photo</span>graphy</h2>
                         <p>Portraits. Camera: Canon EOS 400D, analogs.</p>
                         <a href="#">Photography</a>
                     </figcaption>           
                 </figure>
 
-                <figure id="gallery-drawings">
+                <figure class="grid-figure" id="drawings">
                     <img src="images/front/drawings.jpg">
                     <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
                         <h2><span>Draw</span>ings</h2>
                         <p>Hand sketches and digital drawings. </p>
                         <a href="#">Drawings</a>
                     </figcaption>           
                 </figure>
 
-                <figure id="gallery-prints">
-                    <img src="images/front/print.jpg">
+                <figure class="grid-figure" id="sewing">
+                    <img src="images/front/sewing.jpg">
                     <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
+                        <h2><span>Sew</span>ing</h2>
+                        <p>Sewing and draping.</p>
+                        <a href="#">Sewing</a>
+                    </figcaption>           
+                </figure>
+
+                <figure class="grid-figure" id="prints">
+                    <img src="images/front/prints.jpg">
+                    <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
                         <h2>Digital <span>Prints</span></h2>
                         <p>Projects and samples on cotton and silk.</p>
                         <a href="#">Prints</a>
                     </figcaption>           
                 </figure>
 
-                <figure id="gallery-adobe">
-                    <img src="images/front/adobe.jpg">
+                <figure class="grid-figure" id="moodboards">
+                    <img src="images/front/moodboards.jpg">
                     <figcaption>
-                        <h2>Works in <span>Adobe  Suite</span></h2>
-                        <p>School projects and graphics in Adobe InDesign and Adobe Photoshop.</p>
+                        <i class="fa fa-arrow-circle-left"></i>
+                        <h2>Mood<span>boards</span></h2>
+                        <p>Collages made in Adobe Creative Suite.</p>
                         <a href="#">Photoshop & InDesign</a>
                     </figcaption>           
                 </figure>
 
-                <figure id="gallery-sewing">
-                    <img src="images/front/sewing.jpg">
+                <figure class="grid-figure" id="newsletters">
+                    <img src="images/front/newsletter.jpg">
                     <figcaption>
-                        <h2><span>Sew</span>ing</h2>
-                        <p>Sewing and draping.</p>
+                        <i class="fa fa-arrow-circle-left"></i>
+                        <h2>News<span>letters</span></h2>
+                        <p>Graphics for e-commerce website.</p>
+                        <a href="#">Photoshop & InDesign</a>
+                    </figcaption>           
+                </figure>
+
+                <figure class="grid-figure" id="projects">
+                    <img src="images/front/projects.jpg">
+                    <figcaption>
+                        <i class="fa fa-arrow-circle-left"></i>
+                        <h2>School<span>Projects</span></h2>
+                        <p>Projects made during studies at KEA.</p>
                         <a href="#">Sewing</a>
                     </figcaption>           
                 </figure>
          
         </div>
 
-        <div class="overlay overlay-hugeinc">
-            <button type="button" class="overlay-close">Close</button>
-            <h1>About</h1>
+        <div id="gallery" class="page"></div>
+
+        <div id="about-page" class="page">
             <div class="about">
-                <div class="about-text">
-                    <p>Sylvia Karolina Dluzniewska is a fashion design student based in Copenhagen, Denmark. 
-                    Her adventure with fashion and design began almost three years ago. She completed education as Design technologist, currently lives in the world of sustainable fashion, as both her ongoing education and job focus around sustainability in the fashion industry.</p>
-                    <p>Her work primarily focuses around practical, simple solutions with a subtel touch of Scandinavian minimalism and a pinch of humour. </p>
-                    <p>Filling her days with studying, part-time job and learning Danish, she also finds time to follow her hobbies: photography, travelling and graphic design.</p>
-                    <p><a href="mailto:dluzniewska@gmail.com">Contact.</a></p>
+                <p>Sylvia Karolina Dluzniewska is a fashion design student based in Copenhagen, Denmark. 
+                Her adventure with fashion and design began almost three years ago. She completed education as Design technologist, currently lives in the world of sustainable fashion, as both her ongoing education and job focus around sustainability in the fashion industry.</p>
+                <p>Her work primarily focuses around practical, simple solutions with a subtel touch of Scandinavian minimalism and a pinch of humour. </p>
+                <p>Filling her days with studying, part-time job and learning Danish, she also finds time to follow her hobbies: photography, travelling and graphic design.</p>
 
-                    <a href="cv.pdf" class="main-link" target="_blank">Download résumé (PDF).</a><br>
-                    <a href="#"  class="main-link" id="show-courses" target="_blank">List of completed courses.</a>
-                </div>
-
-                <div class="about-photo">
-                	<img src="images/me.jpg" alt="Sylwia Karolina Dluzniewska"><br>
-                </div>
+                <a class="main-link" href="mailto:dluzniewska@gmail.com">Contact.</a><br>
+                <a href="cv.pdf" class="main-link" target="_blank">Download résumé (PDF).</a><br>
+                <a href="#"  class="main-link" id="show-courses" target="_blank">List of completed courses.</a>
             </div>
             <div class="clearfix"></div>
         <div class="courses">
-          <h2>List of completed courses</h2>  
         <div class="course-list">
             <h3>Design</h3>
             <ul>
@@ -163,10 +185,82 @@
         </div>
         </div>
         </div>
-
+        </main>
         <footer>
             Works and website by <strong><a href="mailto:dluzniewska@gmail.com">Sylwia Karolina Dłużniewska</a></strong> all rights reserved
         </footer>
+
+
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+
         
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -176,16 +270,18 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-54287339-2');ga('send','pageview');
         </script>
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.min.js"></script>
 
         <!-- build:js scripts/main.js -->
+        <script type="text/javascript" src="scripts/photoswipe.min.js"></script>
+        <script type="text/javascript" src="scripts/photoswipe-ui-default.min.js"></script>
+        <script type="text/javascript" src="scripts/initGallery.js"></script>
+        <script src="scripts/galleries.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
