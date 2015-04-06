@@ -33,7 +33,7 @@ $('.grid-figure').on('click', function(e) {
             'position': $el.position()
         });
 
-        if (id !== 'about') {
+        if (id !== 'about' && id !== 'editorials') {
             setGallery(window.galleries[id]);
         }
 
@@ -67,11 +67,13 @@ $('.grid-figure').on('click', function(e) {
                     easing: [0.86, 0, 0.07, 1],
                     complete: function() {
                         $('.grid-figure').not($el).hide();
-                        if (id !== 'about') {
+                        if (id === 'about') {
+                            $('#about-page').fadeIn();
+                        } else if (id === 'editorials') {
+                            $('#editorials-page').fadeIn();
+                        } else {
                             $('#gallery').fadeIn();
                             window.initPhotoSwipeFromDOM('#gallery');
-                        } else {
-                            $('#about-page').fadeIn();
                         }
                     }
                 });
@@ -80,10 +82,12 @@ $('.grid-figure').on('click', function(e) {
         });
     } else {
         $el.removeClass('opened');
-        if (id !== 'about') {
-            $('#gallery').fadeOut();
-        } else {
+        if (id === 'about') {
             $('#about-page').fadeOut();
+        } else if (id === 'editorials') {
+            $('#editorials-page').fadeOut();
+        } else {
+            $('#gallery').fadeOut();
         }
         window.location.hash = '';
         $el.velocity('reverse', {

@@ -22,6 +22,22 @@ body {
     top: 0;
 }
 
+#editorials-page h1 {
+    font-size: 1.2em;
+    text-align: center;
+    small {
+        font-size: 0.7em;
+        color: rgb(182, 182, 182);
+    }
+}
+
+.issuuembed {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
 main {
     margin-top: 69px;
 }
@@ -251,7 +267,7 @@ figure.opened p {
 
 
 .about {
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 50%;
     float: left;
     text-align: justify;
@@ -311,7 +327,7 @@ figure.opened p {
     .grid figure {
         width: 50%;
     }
-    
+
     .about-text {
         width: 100%;
     }

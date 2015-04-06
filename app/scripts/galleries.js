@@ -23,32 +23,11 @@ galleries.photos = [{
     'width': 599,
     'height': 900
 }, {
-    'src': 'images/photos/4.jpg',
-    'thumb': 'images/photos/4_thumb.jpg',
-    'caption': 'Portrait',
-    'desc': 'Analog camera',
-    'width': 597,
-    'height': 900
-}, {
     'src': 'images/photos/5.jpg',
     'thumb': 'images/photos/5_thumb.jpg',
     'caption': 'Portrait',
     'desc': 'Digital camera, Photoshop',
     'width': 1352,
-    'height': 900
-}, {
-    'src': 'images/photos/6.jpg',
-    'thumb': 'images/photos/6_thumb.jpg',
-    'caption': 'Portrait',
-    'desc': 'Digital camera, Photoshop',
-    'width': 599,
-    'height': 900
-}, {
-    'src': 'images/photos/7.jpg',
-    'thumb': 'images/photos/7_thumb.jpg',
-    'caption': 'Portrait',
-    'desc': 'Digital camera, Photoshop',
-    'width': 599,
     'height': 900
 }, {
     'src': 'images/photos/8.jpg',
@@ -70,13 +49,6 @@ galleries.photos = [{
     'caption': 'Portrait',
     'desc': 'Digital camera, Photoshop',
     'width': 599,
-    'height': 900
-}, {
-    'src': 'images/photos/11.jpg',
-    'thumb': 'images/photos/11_thumb.jpg',
-    'caption': 'Conceptual ',
-    'desc': 'Digital camera, Photoshop',
-    'width': 580,
     'height': 900
 }, {
     'src': 'images/photos/12.jpg',
@@ -145,61 +117,47 @@ galleries.drawings = [{
     width: 1273,
     desc: 'Fashion drawing'
 }, {
-    src: 'images/drawings/5.jpg',
-    thumb: 'images/drawings/5_thumb.jpg',
-    caption: 'Flat drawing by hand',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing with details'
+    'src': 'images/drawings/drawing1.jpg',
+    'thumb': 'images/drawings/drawing1_thumb.jpg',
+    'caption': 'Fashion drawing',
+    'desc': 'Sustainable fashion project',
+    'width': 900,
+    'height': 1238
 }, {
-    src: 'images/drawings/6.jpg',
-    thumb: 'images/drawings/6_thumb.jpg',
-    caption: 'Flat drawing, digital',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing in Illustrator'
+    'src': 'images/drawings/drawing2.jpg',
+    'thumb': 'images/drawings/drawing2_thumb.jpg',
+    'caption': 'Fashion drawing',
+    'desc': 'Sustainable fashion project',
+    'width': 4109,
+    'height': 2480
 }, {
-    src: 'images/drawings/7.jpg',
-    thumb: 'images/drawings/7_thumb.jpg',
-    caption: 'Flat drawing, digital',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing in Illustrator'
+    'src': 'images/drawings/bra1.jpg',
+    'thumb': 'images/drawings/bra1_thumb.jpg',
+    'caption': 'Technical drawing',
+    'desc': 'Female collection',
+    'width': 800,
+    'height': 1200
 }, {
-    src: 'images/drawings/8.jpg',
-    thumb: 'images/drawings/8_thumb.jpg',
-    caption: 'Flat drawing, digital',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing in Illustrator'
+    'src': 'images/drawings/bra3.jpg',
+    'thumb': 'images/drawings/bra3_thumb.jpg',
+    'caption': 'Technical drawing',
+    'desc': 'Female collection',
+    'width': 800,
+    'height': 1200
 }, {
-    src: 'images/drawings/9.jpg',
-    thumb: 'images/drawings/9_thumb.jpg',
-    caption: 'Flat drawing, digital',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing in Illustrator'
+    'src': 'images/drawings/coat.jpg',
+    'thumb': 'images/drawings/coat_thumb.jpg',
+    'caption': 'Technical drawing',
+    'desc': 'Female collection',
+    'width': 800,
+    'height': 1200
 }, {
-    src: 'images/drawings/10.jpg',
-    thumb: 'images/drawings/10_thumb.jpg',
-    caption: 'Flat drawing, digital',
-    height: 900,
-    width: 1200,
-    desc: 'Technical drawing in Illustrator'
-}, {
-    src: 'images/drawings/12.jpg',
-    thumb: 'images/drawings/12_thumb.jpg',
-    caption: 'Sketching',
-    height: 900,
-    width: 1200,
-    desc: 'Silhouettes'
-}, {
-    src: 'images/drawings/col.jpg',
-    thumb: 'images/drawings/col_thumb.jpg',
-    caption: 'Fashion sketches',
-    desc: 'Dress collection',
-    width: 900,
-    height: 1238
+    'src': 'images/drawings/jacket.jpg',
+    'thumb': 'images/drawings/jacket_thumb.jpg',
+    'caption': 'Technical drawing',
+    'desc': 'Kids collection',
+    'width': 800,
+    'height': 1200
 }];
 
 galleries.prints = [{
@@ -260,20 +218,6 @@ galleries.prints = [{
     width: 959,
     height: 900
 }, {
-    src: 'images/prints/9.jpg',
-    thumb: 'images/prints/9_thumb.jpg',
-    caption: 'Houndstooth digital',
-    desc: 'Print project',
-    width: 1128,
-    height: 900
-}, {
-    src: 'images/prints/10.jpg',
-    thumb: 'images/prints/10_thumb.jpg',
-    caption: 'B-day party',
-    desc: 'Print project',
-    width: 1189,
-    height: 900
-}, {
     src: 'images/prints/11.jpg',
     thumb: 'images/prints/11_thumb.jpg',
     caption: 'Track jam',
@@ -311,27 +255,20 @@ galleries.moodboards = [{
     width: 1273,
     desc: 'School project'
 }, {
-    src: 'images/moodboards/5.jpg',
-    thumb: 'images/moodboards/5_thumb.jpg',
-    caption: 'Page from a report',
-    height: 900,
-    width: 1165,
-    desc: 'School project'
+    'src': 'images/moodboards/greenmood.jpg',
+    'thumb': 'images/moodboards/greenmood_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Sustainable signature',
+    'width': 1754,
+    'height': 1240
 }, {
-    src: 'images/moodboards/mood2.jpg',
-    thumb: 'images/moodboards/mood2_thumb.jpg',
-    caption: 'Moodboard',
-    desc: 'Dress collection',
-    width: 1273,
-    height: 900
-}, {
-    src: 'images/moodboards/persona.jpg',
-    thumb: 'images/moodboards/persona_thumb.jpg',
-    caption: 'Receiver collage',
-    desc: 'Dress collection',
-    width: 1000,
-    height: 1415
-}, ];
+    'src': 'images/moodboards/shapemood.jpg',
+    'thumb': 'images/moodboards/shapemood_thumb.jpg',
+    'caption': 'Internship examination',
+    'desc': 'Structure print',
+    'width': 1190,
+    'height': 1649
+}];
 
 
 galleries.newsletters = [{
@@ -451,25 +388,11 @@ galleries.sewing = [{
     width: 1171,
     height: 900
 }, {
-    src: 'images/sewing/4.jpg',
-    thumb: 'images/sewing/4_thumb.jpg',
-    caption: 'Scarf / hood',
-    desc: 'Soft scarf in jersey cotton',
-    width: 1274,
-    height: 900
-}, {
     src: 'images/sewing/5.jpg',
     thumb: 'images/sewing/5_thumb.jpg',
     caption: 'iPad cover',
     desc: ' .',
     width: 1569,
-    height: 900
-}, {
-    src: 'images/sewing/6.jpg',
-    thumb: 'images/sewing/6_thumb.jpg',
-    caption: 'Draping',
-    desc: 'Coat fragment',
-    width: 1223,
     height: 900
 }, {
     src: 'images/sewing/IMG_2741.jpg',
@@ -478,4 +401,18 @@ galleries.sewing = [{
     desc: 'Zero waste, hand-crafted dress',
     width: 1206,
     height: 900
+}, {
+    'src': 'images/sewing/sew1.jpg',
+    'thumb': 'images/sewing/sew1_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Sustainable signature',
+    'width': 2000,
+    'height': 1614
+}, {
+    'src': 'images/sewing/transparentpic.jpg',
+    'thumb': 'images/sewing/transparentpic_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Clothing collection for Le Klint',
+    'width': 1365,
+    'height': 1614
 }];
