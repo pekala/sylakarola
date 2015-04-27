@@ -66,7 +66,6 @@ nav {
     width: 100%;
     margin: 0 auto;
     padding: 1em 0;
-
     a {
         display: table-cell;
         text-align: center;
@@ -83,20 +82,17 @@ nav {
             padding-left: 1em;
         }
     }
-
     a:hover {
         background: black;
         color: white;
         transition: background 0.6s, color 0.6s;
     }
-
     a.primary:hover {
         background: none;
         color: black;
         transition: background 0.6s;
     }
 }
-
 
 .grid {
     overflow: hidden;
@@ -180,7 +176,6 @@ figure.opened {
 
 .grid figure h2 {
     word-spacing: -0.15em;
-
     font-weight: 300;
 }
 
@@ -211,25 +206,24 @@ figure p {
     padding: 10px 0;
 }
 
-
 figure p {
     bottom: 30px;
     line-height: 1.5;
-    -webkit-transform: translate3d(0,100%,0);
-    transform: translate3d(0,100%,0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
 }
 
 figure h2 {
     top: 30px;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
-    -webkit-transform: translate3d(0,20px,0);
-    transform: translate3d(0,20px,0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
 }
 
 figure:hover h2, figure.opened h2 {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 figure:hover img, figure.opened img {
@@ -245,8 +239,8 @@ figure h2::after {
     height: 4px;
     background: #fff;
     content: '';
-    -webkit-transform: translate3d(0,40px,0);
-    transform: translate3d(0,40px,0);
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
 }
 
 figure h2::after,
@@ -261,10 +255,9 @@ figure.opened h2::after,
 figure:hover p,
 figure.opened p {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
-
 
 .about {
     font-size: 1.2em;
@@ -323,39 +316,73 @@ figure.opened p {
     font-size: 0;
 }
 
+#contact-page {
+    p {
+        max-width: 80%;
+    }
+    a {
+        white-space: nowrap;
+    }
+}
+
+form {
+    fieldset {
+        border: none;
+    }
+    label {
+        display: block;
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+    input, textarea {
+        min-width: 70%;
+        padding: 0.9em;
+        font-size: 1em;
+        margin-top: 0.5em;
+        border: 1px solid #ccc;
+    }
+    textarea {
+        min-height: 200px;
+    }
+    button {
+        padding: 1em;
+        font-size: 1em;
+        background: white;
+        border: 1px solid #ccc;
+    }
+}
+
+#error {
+    display: none;
+    color: red;
+}
+
 @media screen and (max-width: 69.5em) {
     .grid figure {
         width: 50%;
     }
-
     .about-text {
         width: 100%;
     }
-
     .grid figure figcaption {
         font-size: 90%;
     }
-
     .about-photo {
-		width: 100%;
-		padding: 2em 0;
-	}
-
+        width: 100%;
+        padding: 2em 0;
+    }
     .course-list {
         width: 50%;
     }
 }
 
-
 @media screen and (max-width: 41.5em) {
     .about-text {
         width: 100%;
     }
-
     .course-list {
         width: 100%;
     }
-
     .grid figure {
         width: 100%;
     }
@@ -363,6 +390,3 @@ figure.opened p {
         display: block;
     }
 }
-
-
-

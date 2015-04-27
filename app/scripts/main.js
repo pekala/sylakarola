@@ -71,6 +71,8 @@ $('.grid-figure').on('click', function(e) {
                             $('#about-page').fadeIn();
                         } else if (id === 'editorials') {
                             $('#editorials-page').fadeIn();
+                        } else if (id === 'contact') {
+                            $('#contact-page').fadeIn();
                         } else {
                             $('#gallery').fadeIn();
                             window.initPhotoSwipeFromDOM('#gallery');
@@ -86,6 +88,8 @@ $('.grid-figure').on('click', function(e) {
             $('#about-page').fadeOut();
         } else if (id === 'editorials') {
             $('#editorials-page').fadeOut();
+        } else if (id === 'contact') {
+            $('#contact-page').fadeOut();
         } else {
             $('#gallery').fadeOut();
         }
@@ -116,4 +120,42 @@ $('#show-courses').on('click', function(e) {
             scrollTop: $('.overlay').height()
         }, 'slow');
     }, 500);
+});
+
+$('form').submit(function(e) {
+    e.preventDefault();
+    var email = $('#email').val();
+    var name = $('#name').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+
+    $('button').attr('disabled', 'disabled');
+    $.ajax({
+        type: 'POST',
+        url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+        data: {
+            'key': 'OVAlsbixBG3Ij3J7C_BNDg',
+            'message': {
+                'from_email': email,
+                'from_name': name,
+                'to': [{
+                    'email': 'maciej@peka.la',
+                    'type': 'to'
+                }],
+                'autotext': 'true',
+                'subject': subject,
+                'html': message
+            }
+        }
+    }).done(function(response) {
+        if (response[0].status === 'rejected') {
+            $('#error').show();
+        } else {
+            $('input, textarea').val('');
+        }
+        $('button').removeAttr('disabled');
+    }).fail(function() {
+        $('#error').show();
+        $('button').removeAttr('disabled');
+    });
 });
