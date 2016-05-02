@@ -1,0 +1,464 @@
+.top-nav {
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top-nav--link--primary,
+.top-nav--link--secondary {
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.top-nav--link--primary {
+  float: left;
+  font-size: 1.4em;
+}
+
+.top-nav--link--secondary {
+  float: right;
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 41.5em) {
+  .top-nav--link--primary,
+  .top-nav--link--secondary {
+    padding: 0 10px;
+  }
+
+  .top-nav--link--primary {
+    font-size: 0.9em;
+  }
+
+  .top-nav--link--secondary {
+    font-size: 0.7em;
+    letter-spacing: 2px;
+  }
+}
+.footer {
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.45);
+  z-index: 2;
+}
+
+@media screen and (max-width: 41.5em) {
+  .footer {
+    position: relative;
+    font-size: 0.8em;
+  }
+}
+body {
+  background: white;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+#editorials-page h1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+#editorials-page h1 small {
+  font-size: 0.7em;
+  color: #b6b6b6;
+}
+
+.issuuembed {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: 60px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
+
+.grid {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  margin: -0.135em;
+  width: 33.3%;
+  height: 40vh;
+  max-height: 640px;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+.grid figure i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 200px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+}
+
+figure.opened i {
+  opacity: 0.6;
+  transition: all 1s ease-in-out;
+  transition-delay: 1s;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  font-weight: 600;
+}
+
+figure figcaption {
+  text-align: right;
+}
+
+figure h2,
+figure p {
+  position: absolute;
+  right: 30px;
+  left: 30px;
+  padding: 10px 0;
+}
+
+figure p {
+  bottom: 30px;
+  line-height: 1.5;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+figure h2 {
+  top: 30px;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+figure:hover h2, figure.opened h2 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure:hover img, figure.opened img {
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+
+figure h2::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  content: '';
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+}
+
+figure h2::after,
+figure p {
+  opacity: 0;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure:hover h2::after,
+figure.opened h2::after,
+figure:hover p,
+figure.opened p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.about {
+  font-size: 1.2em;
+  width: 50%;
+  float: left;
+  text-align: justify;
+}
+.about p {
+  margin-top: 0;
+}
+.about a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #3085a3;
+}
+.about a.main-link {
+  padding: 5px;
+  display: block;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+.course-list {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 33%;
+}
+
+.courses {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.courses.revealed {
+  height: auto;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.page {
+  display: none;
+  margin-left: 35%;
+}
+.page figure {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+#contact-page p {
+  max-width: 80%;
+}
+#contact-page a {
+  white-space: nowrap;
+}
+
+form fieldset {
+  border: none;
+}
+form label {
+  display: block;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+form input, form textarea {
+  min-width: 70%;
+  padding: 0.9em;
+  font-size: 1em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+}
+form textarea {
+  min-height: 200px;
+}
+form button {
+  padding: 1em;
+  font-size: 1em;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+#gallery-photos {
+  font-size: 0;
+}
+
+.gallery-intro {
+  padding: 10px;
+}
+
+#error {
+  display: none;
+  color: red;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+@media screen and (max-width: 69.5em) {
+  .grid figure.fixed {
+    width: 35%;
+  }
+
+  .grid figure {
+    width: 50%;
+    transition: width 0.2s ease-in-out;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .page {
+    margin-left: 35%;
+    width: 65%;
+    padding: 0 20px;
+  }
+  .page figure {
+    margin: 10px;
+  }
+
+  .page > div {
+    width: 100%;
+  }
+
+  #contact-page {
+    padding: 20px;
+  }
+  #contact-page input, #contact-page textarea {
+    width: 100%;
+  }
+  #contact-page button {
+    width: 25%;
+  }
+  #contact-page p {
+    max-width: none;
+  }
+
+  .grid figure figcaption {
+    font-size: 90%;
+  }
+
+  .about-photo {
+    width: 100%;
+    padding: 2em 0;
+  }
+
+  .course-list {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 41.5em) {
+  .about-text {
+    width: 100%;
+  }
+
+  .course-list {
+    width: 100%;
+  }
+
+  .grid figure, .grid figure.fixed {
+    width: 100%;
+  }
+
+  .grid figure i {
+    font-size: 75px;
+  }
+
+  .page {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #contact-page button {
+    width: 100%;
+  }
+
+  .fixed {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}

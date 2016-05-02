@@ -1,0 +1,44 @@
+.top-nav {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.top-nav--link--primary,
+.top-nav--link--secondary {
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.top-nav--link--primary {
+    float: left;
+    font-size: 1.4em;
+}
+
+.top-nav--link--secondary {
+    float: right;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 41.5em) {
+    .top-nav--link--primary,
+    .top-nav--link--secondary {
+        padding: 0 10px;
+    }
+
+    .top-nav--link--primary {
+        font-size: 0.9em;
+    }
+
+    .top-nav--link--secondary {
+        font-size: 0.7em;
+        letter-spacing: 2px;
+    }
+}

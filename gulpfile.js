@@ -13,7 +13,7 @@ gulp.task('styles', function() {
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('.tmp/styles'))
+        .pipe(gulp.dest('app/styles'))
         .pipe($.size());
 });
 
@@ -30,7 +30,7 @@ gulp.task('html', ['styles', 'scripts'], function() {
 
     return gulp.src('app/*.html')
         .pipe($.useref.assets({
-            searchPath: '{.tmp,app}'
+            searchPath: 'app'
         }))
         .pipe(jsFilter)
         .pipe($.uglify())
@@ -71,7 +71,7 @@ gulp.task('extras', function() {
 });
 
 gulp.task('clean', function() {
-    return gulp.src(['.tmp', 'dist'], {
+    return gulp.src(['app/.tmp', 'dist'], {
         read: false
     }).pipe($.clean());
 });
@@ -89,7 +89,7 @@ gulp.task('connect', function() {
             port: 35729
         }))
         .use(connect.static('app'))
-        .use(connect.static('.tmp'))
+        .use(connect.static('app/.tmp'))
         .use(connect.directory('app'));
 
     require('http').createServer(app)
@@ -127,7 +127,7 @@ gulp.task('watch', ['connect', 'serve'], function() {
 
     gulp.watch([
         'app/*.html',
-        '.tmp/styles/**/*.css',
+        'app/.tmp/styles/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
     ]).on('change', function(file) {

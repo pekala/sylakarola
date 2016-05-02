@@ -1,5 +1,8 @@
 var galleries = {};
 window.galleries = galleries;
+window.galleryDesc = {
+    trends: '<p>Abraham Lincoln once said that the best way to predict future is to create it.</p> <p>Trend forecasters are in the right place to shape the future. Having in mind, and by trying to find a solution the contemporary problems of unethically made clothing and environmentally-destructive actions of fashion industry, the Curious Narrator was created.</p> <p>The core idea of the Curious Narrator is to present sustainability in a context a trend forecast. The idea behind it is to create a sustainable trend forecast without unnecessary words and definitions, in a visual and inspiring way.</p>'
+};
 
 galleries.photos = [{
     'src': 'images/photos/1.jpg',
@@ -160,7 +163,207 @@ galleries.drawings = [{
     'height': 1200
 }];
 
-galleries.prints = [{
+galleries.moodboards = [{
+    src: 'images/moodboards/1.jpg',
+    thumb: 'images/moodboards/1_thumb.jpg',
+    caption: 'Mood board',
+    height: 900,
+    width: 636,
+    desc: 'School projet'
+}, {
+    src: 'images/moodboards/2.jpg',
+    thumb: 'images/moodboards/2_thumb.jpg',
+    caption: 'Mood board',
+    height: 900,
+    width: 1273,
+    desc: 'School project'
+}, {
+    src: 'images/moodboards/3.jpg',
+    thumb: 'images/moodboards/3_thumb.jpg',
+    caption: 'Persona',
+    height: 900,
+    width: 1273,
+    desc: 'School project'
+}, {
+    src: 'images/moodboards/4.jpg',
+    thumb: 'images/moodboards/4_thumb.jpg',
+    caption: 'Persona',
+    height: 900,
+    width: 1273,
+    desc: 'School project'
+}, {
+    'src': 'images/moodboards/greenmood.jpg',
+    'thumb': 'images/moodboards/greenmood_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Sustainable signature',
+    'width': 1754,
+    'height': 1240
+}, {
+    'src': 'images/moodboards/shapemood.jpg',
+    'thumb': 'images/moodboards/shapemood_thumb.jpg',
+    'caption': 'Internship examination',
+    'desc': 'Structure print',
+    'width': 1190,
+    'height': 1649
+}, {
+    src: 'images/newsletters/1.jpg',
+    thumb: 'images/newsletters/1_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 984,
+    height: 3400,
+}, {
+    src: 'images/newsletters/2.jpg',
+    thumb: 'images/newsletters/2_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 800,
+    height: 1150,
+}, {
+    src: 'images/newsletters/3.jpg',
+    thumb: 'images/newsletters/3_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 799,
+    height: 926,
+}, {
+    src: 'images/newsletters/4.jpg',
+    thumb: 'images/newsletters/4_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 799,
+    height: 980,
+}, {
+    src: 'images/newsletters/5.jpg',
+    thumb: 'images/newsletters/5_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 940,
+    height: 1250,
+}, {
+    src: 'images/newsletters/6.jpg',
+    thumb: 'images/newsletters/6_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 1000,
+    height: 1400,
+}, {
+    src: 'images/newsletters/7.jpg',
+    thumb: 'images/newsletters/7_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 984,
+    height: 2400,
+}, {
+    src: 'images/newsletters/8.jpg',
+    thumb: 'images/newsletters/8_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 806,
+    height: 1250,
+}, {
+    src: 'images/newsletters/9.jpg',
+    thumb: 'images/newsletters/9_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 800,
+    height: 700,
+}, {
+    src: 'images/newsletters/10.jpg',
+    thumb: 'images/newsletters/10_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 1600,
+    height: 928,
+}, {
+    src: 'images/newsletters/11.jpg',
+    thumb: 'images/newsletters/11_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 900,
+    height: 1300,
+}, {
+    src: 'images/newsletters/12.jpg',
+    thumb: 'images/newsletters/12_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 984,
+    height: 1500,
+}, {
+    src: 'images/newsletters/13.jpg',
+    thumb: 'images/newsletters/13_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 900,
+    height: 1300,
+}];
+
+galleries.projects = [{
+    src: 'images/projects/exam.jpg',
+    thumb: 'images/projects/exam_thumb.jpg',
+    caption: '2nd Wear',
+    desc: 'Garment sewn from second hand clothing',
+    width: 1000,
+    height: 1376
+}, {
+    src: 'images/projects/weave.jpg',
+    thumb: 'images/projects/weave_thumb.jpg',
+    caption: 'Choice of material',
+    desc: 'Hand-woven accessories',
+    width: 1754,
+    height: 1240
+}];
+
+galleries.fashion = [{
+    src: 'images/sewing/1.jpg',
+    thumb: 'images/sewing/1_thumb.jpg',
+    caption: 'Sweatshirt',
+    desc: 'Sewn from 2nd hand clothes',
+    width: 1065,
+    height: 900
+}, {
+    src: 'images/sewing/2.jpg',
+    thumb: 'images/sewing/2_thumb.jpg',
+    caption: 'Sweat coat',
+    desc: 'Bathrobe inspired coat with snap buttons',
+    width: 1307,
+    height: 900
+}, {
+    src: 'images/sewing/3.jpg',
+    thumb: 'images/sewing/3_thumb.jpg',
+    caption: 'Anty shirt',
+    desc: 'Shirt with ant print',
+    width: 1171,
+    height: 900
+}, {
+    src: 'images/sewing/5.jpg',
+    thumb: 'images/sewing/5_thumb.jpg',
+    caption: 'iPad cover',
+    desc: ' .',
+    width: 1569,
+    height: 900
+}, {
+    src: 'images/sewing/IMG_2741.jpg',
+    thumb: 'images/sewing/IMG_2741_thumb.jpg',
+    caption: 'Dress collection',
+    desc: 'Zero waste, hand-crafted dress',
+    width: 1206,
+    height: 900
+}, {
+    'src': 'images/sewing/sew1.jpg',
+    'thumb': 'images/sewing/sew1_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Sustainable signature',
+    'width': 2000,
+    'height': 1614
+}, {
+    'src': 'images/sewing/transparentpic.jpg',
+    'thumb': 'images/sewing/transparentpic_thumb.jpg',
+    'caption': 'School project',
+    'desc': 'Clothing collection for Le Klint',
+    'width': 1365,
+    'height': 1614
+}, {
     src: 'images/prints/1.jpg',
     thumb: 'images/prints/1_thumb.jpg',
     caption: 'Octopus',
@@ -226,193 +429,88 @@ galleries.prints = [{
     height: 900
 }];
 
-galleries.moodboards = [{
-    src: 'images/moodboards/1.jpg',
-    thumb: 'images/moodboards/1_thumb.jpg',
-    caption: 'Mood board',
-    height: 900,
-    width: 636,
-    desc: 'School projet'
+galleries.trends = [{
+    src: 'images/trends/1curious.jpg',
+    thumb: 'images/trends/1curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2751,
+    height: 1837,
 }, {
-    src: 'images/moodboards/2.jpg',
-    thumb: 'images/moodboards/2_thumb.jpg',
-    caption: 'Mood board',
-    height: 900,
-    width: 1273,
-    desc: 'School project'
+    src: 'images/trends/2curious.jpg',
+    thumb: 'images/trends/2curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2663,
+    height: 1778,
 }, {
-    src: 'images/moodboards/3.jpg',
-    thumb: 'images/moodboards/3_thumb.jpg',
-    caption: 'Persona',
-    height: 900,
-    width: 1273,
-    desc: 'School project'
+    src: 'images/trends/3curious.jpg',
+    thumb: 'images/trends/3curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2558,
+    height: 1708,
 }, {
-    src: 'images/moodboards/4.jpg',
-    thumb: 'images/moodboards/4_thumb.jpg',
-    caption: 'Persona',
-    height: 900,
-    width: 1273,
-    desc: 'School project'
+    src: 'images/trends/4curious.jpg',
+    thumb: 'images/trends/4curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2327,
+    height: 1554,
 }, {
-    'src': 'images/moodboards/greenmood.jpg',
-    'thumb': 'images/moodboards/greenmood_thumb.jpg',
-    'caption': 'School project',
-    'desc': 'Sustainable signature',
-    'width': 1754,
-    'height': 1240
+    src: 'images/trends/5curious.jpg',
+    thumb: 'images/trends/5curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2816,
+    height: 1880,
 }, {
-    'src': 'images/moodboards/shapemood.jpg',
-    'thumb': 'images/moodboards/shapemood_thumb.jpg',
-    'caption': 'Internship examination',
-    'desc': 'Structure print',
-    'width': 1190,
-    'height': 1649
-}];
-
-
-galleries.newsletters = [{
-    src: 'images/newsletters/6.jpg',
-    thumb: 'images/newsletters/6_thumb.jpg',
-    caption: 'Collage',
-    height: 900,
-    width: 734,
-    desc: 'Blog post'
+    src: 'images/trends/6curious.jpg',
+    thumb: 'images/trends/6curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2732,
+    height: 1824,
 }, {
-    src: 'images/newsletters/7.jpg',
-    thumb: 'images/newsletters/7_thumb.jpg',
-    caption: 'Delicate & Sustainable',
-    height: 900,
-    width: 590,
-    desc: 'Newsletter moodboard'
+    src: 'images/trends/7curious.jpg',
+    thumb: 'images/trends/7curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2544,
+    height: 1698,
 }, {
-    src: 'images/newsletters/8.jpg',
-    thumb: 'images/newsletters/8_thumb.jpg',
-    caption: 'Easter Voucher',
-    height: 900,
-    width: 1286,
-    desc: ''
+    src: 'images/trends/8curious.jpg',
+    thumb: 'images/trends/8curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2816,
+    height: 1880,
 }, {
-    src: 'images/newsletters/9.jpg',
-    thumb: 'images/newsletters/9_thumb.jpg',
-    caption: 'Sale flyer',
-    height: 900,
-    width: 675,
-    desc: ''
+    src: 'images/trends/9curious.jpg',
+    thumb: 'images/trends/9curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2760,
+    height: 1843,
 }, {
-    src: 'images/newsletters/10.jpg',
-    thumb: 'images/newsletters/10_thumb.jpg',
-    caption: 'Goodie bag flyer',
-    height: 900,
-    width: 1125,
-    desc: ''
+    src: 'images/trends/10curious.jpg',
+    thumb: 'images/trends/10curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2753,
+    height: 1838,
 }, {
-    src: 'images/newsletters/11.jpg',
-    thumb: 'images/newsletters/11_thumb.jpg',
-    caption: 'Promo box',
-    height: 900,
-    width: 1200,
-    desc: ''
+    src: 'images/trends/11curious.jpg',
+    thumb: 'images/trends/11curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 1880,
+    height: 2816,
 }, {
-    src: 'images/newsletters/12.jpg',
-    thumb: 'images/newsletters/12_thumb.jpg',
-    caption: 'Maikel Tawadros',
-    height: 900,
-    width: 656,
-    desc: 'Newsletter moodboard'
-}, {
-    src: 'images/newsletters/13.jpg',
-    thumb: 'images/newsletters/13_thumb.jpg',
-    caption: 'Summer Lovin',
-    height: 900,
-    width: 704,
-    desc: 'Newsletter moodboard'
-}, {
-    src: 'images/newsletters/14.jpg',
-    thumb: 'images/newsletters/14_thumb.jpg',
-    caption: 'Festival Chick',
-    height: 900,
-    width: 626,
-    desc: 'Newsletter moodboard'
-}, {
-    src: 'images/newsletters/15.jpg',
-    thumb: 'images/newsletters/15_thumb.jpg',
-    caption: 'Urban Summer',
-    height: 900,
-    width: 623,
-    desc: 'Newsletter moodboard'
-}, {
-    src: 'images/newsletters/16.jpg',
-    thumb: 'images/newsletters/16_thumb.jpg',
-    caption: 'Minka Toeth',
-    height: 1500,
-    width: 493,
-    desc: 'Newsletter proposal'
-}];
-
-galleries.projects = [{
-    src: 'images/projects/exam.jpg',
-    thumb: 'images/projects/exam_thumb.jpg',
-    caption: '2nd Wear',
-    desc: 'Garment sewn from second hand clothing',
-    width: 1000,
-    height: 1376
-}, {
-    src: 'images/projects/weave.jpg',
-    thumb: 'images/projects/weave_thumb.jpg',
-    caption: 'Choice of material',
-    desc: 'Hand-woven accessories',
-    width: 1754,
-    height: 1240
-}];
-
-galleries.sewing = [{
-    src: 'images/sewing/1.jpg',
-    thumb: 'images/sewing/1_thumb.jpg',
-    caption: 'Sweatshirt',
-    desc: 'Sewn from 2nd hand clothes',
-    width: 1065,
-    height: 900
-}, {
-    src: 'images/sewing/2.jpg',
-    thumb: 'images/sewing/2_thumb.jpg',
-    caption: 'Sweat coat',
-    desc: 'Bathrobe inspired coat with snap buttons',
-    width: 1307,
-    height: 900
-}, {
-    src: 'images/sewing/3.jpg',
-    thumb: 'images/sewing/3_thumb.jpg',
-    caption: 'Anty shirt',
-    desc: 'Shirt with ant print',
-    width: 1171,
-    height: 900
-}, {
-    src: 'images/sewing/5.jpg',
-    thumb: 'images/sewing/5_thumb.jpg',
-    caption: 'iPad cover',
-    desc: ' .',
-    width: 1569,
-    height: 900
-}, {
-    src: 'images/sewing/IMG_2741.jpg',
-    thumb: 'images/sewing/IMG_2741_thumb.jpg',
-    caption: 'Dress collection',
-    desc: 'Zero waste, hand-crafted dress',
-    width: 1206,
-    height: 900
-}, {
-    'src': 'images/sewing/sew1.jpg',
-    'thumb': 'images/sewing/sew1_thumb.jpg',
-    'caption': 'School project',
-    'desc': 'Sustainable signature',
-    'width': 2000,
-    'height': 1614
-}, {
-    'src': 'images/sewing/transparentpic.jpg',
-    'thumb': 'images/sewing/transparentpic_thumb.jpg',
-    'caption': 'School project',
-    'desc': 'Clothing collection for Le Klint',
-    'width': 1365,
-    'height': 1614
+    src: 'images/trends/12curious.jpg',
+    thumb: 'images/trends/12curious_thumb.jpg',
+    caption: '',
+    desc: '',
+    width: 2428,
+    height: 1620,
 }];

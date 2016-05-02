@@ -1,22 +1,79 @@
 'use strict';
 
-var HEADER_HEIGHT = 69;
+var HEADER_HEIGHT = 60;
 
-var setGallery = function(photos) {
-    $('#gallery figure').remove();
+var setGallery = function(photos, desc) {
+    $('#gallery-photos figure').remove();
+    $('#gallery-desc *').remove();
+    if(desc) {
+        $('<div class="gallery-intro">' + desc + '</div>').appendTo('#gallery-desc');
+    }
     $(photos).each(function(index, photo) {
         $('<figure>' +
             '<a href="' + photo.src + '" data-size="' + photo.width + 'x' + photo.height + '">' +
             '<img src="' + photo.thumb + '" alt="' + photo.desc + '" />' +
             '</a>' +
             '<figcaption><strong>' + photo.caption + '</strong> ' + photo.desc + '</figcaption>' +
-            '</figure>').appendTo('#gallery');
+            '</figure>').appendTo('#gallery-photos');
     });
 };
 
 $(document).ready(function() {
     var hash = window.location.hash.substr(1);
     $('#' + hash).click();
+});
+
+function closeElement($el) {
+    var deferred = $.Deferred();
+    if(!$el.length) {
+        return deferred.resolve();
+    }
+    $el.removeClass('opened');
+
+    $('#about-page').fadeOut();
+    $('#publications-page').fadeOut();
+    $('#contact-page').fadeOut();
+    $('#gallery').fadeOut();
+
+    window.location.hash = '';
+    $el.velocity('reverse', {
+        duration: 200
+    }).velocity({
+        left: $el.data('position').left,
+    }, {
+        duration: 200,
+        complete: function() {
+            $('.grid-figure').not($el).show();
+            $el.removeAttr('style');
+            $el.removeClass('fixed');
+            $('.grid-figure').not($el).velocity('transition.fadeIn', {
+                stagger: 50,
+                display: 'inline-block',
+                complete: function () {
+                    deferred.resolve();
+                }
+            });
+        }
+    });
+    return deferred.promise();
+}
+
+$('#go-to-contact').on('click', function() {
+    closeElement($('.grid-figure.opened'));
+});
+
+$('#go-to-about').on('click', function() {
+    closeElement($('.grid-figure.opened')).then(function () {
+        $('.grid-figure').velocity('transition.fadeOut', {
+            stagger: 50,
+            duration: 400,
+            display: 'inline-block',
+            complete: function () {
+                $('.grid-figure').hide();
+                $('#about-page').fadeIn();
+            }
+        });
+    });
 });
 
 $('.grid-figure').on('click', function(e) {
@@ -27,26 +84,25 @@ $('.grid-figure').on('click', function(e) {
     if (!$el.hasClass('opened')) {
         $el.addClass('opened');
 
-        window.location.hash = id;
+        // window.location.hash = id;
 
         $el.data({
             'position': $el.position()
         });
 
-        if (id !== 'about' && id !== 'editorials') {
-            setGallery(window.galleries[id]);
+        if (id !== 'about' && id !== 'publications') {
+            setGallery(window.galleries[id], window.galleryDesc[id]);
         }
-
         $('.grid-figure').not($el).velocity('transition.fadeOut', {
             stagger: 50,
             duration: 400,
             display: 'inline-block',
             complete: function() {
                 $el.css({
-                    'position': 'fixed',
                     top: $el.position().top,
                     left: $el.position().left
                 });
+                $el.addClass('fixed');
 
                 var durationX;
                 if ($el.position().left < 10) {
@@ -61,21 +117,22 @@ $('.grid-figure').on('click', function(e) {
                     duration: durationX,
                     easing: [0.86, 0, 0.07, 1]
                 }).velocity({
-                    height: 640,
+                    height: $(window).width() > 665 ? 640 : 0.4 * $(window).height(),
                     top: HEADER_HEIGHT
                 }, {
                     easing: [0.86, 0, 0.07, 1],
                     complete: function() {
                         $('.grid-figure').not($el).hide();
+                        $('html, body').animate({ scrollTop: 0 }, 'slow');
                         if (id === 'about') {
                             $('#about-page').fadeIn();
-                        } else if (id === 'editorials') {
-                            $('#editorials-page').fadeIn();
+                        } else if (id === 'publications') {
+                            $('#publications-page').fadeIn();
                         } else if (id === 'contact') {
                             $('#contact-page').fadeIn();
                         } else {
                             $('#gallery').fadeIn();
-                            window.initPhotoSwipeFromDOM('#gallery');
+                            window.initPhotoSwipeFromDOM('#gallery-photos');
                         }
                     }
                 });
@@ -83,32 +140,7 @@ $('.grid-figure').on('click', function(e) {
             }
         });
     } else {
-        $el.removeClass('opened');
-        if (id === 'about') {
-            $('#about-page').fadeOut();
-        } else if (id === 'editorials') {
-            $('#editorials-page').fadeOut();
-        } else if (id === 'contact') {
-            $('#contact-page').fadeOut();
-        } else {
-            $('#gallery').fadeOut();
-        }
-        window.location.hash = '';
-        $el.velocity('reverse', {
-            duration: 200
-        }).velocity({
-            left: $el.data('position').left,
-        }, {
-            duration: 200,
-            complete: function() {
-                $('.grid-figure').not($el).show();
-                $el.removeAttr('style');
-                $('.grid-figure').not($el).velocity('transition.fadeIn', {
-                    stagger: 50,
-                    display: 'inline-block'
-                });
-            }
-        });
+        closeElement($el);
     }
 });
 

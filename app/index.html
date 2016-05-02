@@ -13,7 +13,7 @@
         <!-- endbuild -->
 
         <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="../.tmp/styles/main.css">
+        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/photoswipe.css">
         <link rel="stylesheet" type="text/css" href="styles/default-skin/default-skin.css">
         <!-- endbuild -->
@@ -29,31 +29,23 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="nav-container">
+        <div class="top-nav">
             <nav>
-                <a href="#" class="primary">Sylwia Karolina</a>
+                <span class="top-nav--link--primary">Sylwia Karolina</span>
+                <a href="#" id="go-to-contact" class="top-nav--link--secondary">Contact</a>
+                <a href="#" id="go-to-about" class="top-nav--link--secondary">About</a>
             </nav>
         </div>
         <main>
         <div class="grid">
-
-				<figure class="grid-figure" id="about">
-                    <img src="images/front/about.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2>About <span>me</span></h2>
-                        <p>Sylwia Karolina Dluzniewska. CV.</p>
-                        <a href="#">About</a>
-                    </figcaption>
-                </figure>
 
                 <figure class="grid-figure" id="photos">
                     <img src="images/front/photos.jpg">
                     <figcaption>
                         <i class="fa fa-arrow-circle-left"></i>
                         <h2><span>Photo</span>graphy</h2>
-                        <p>Portraits. Camera: Canon EOS 400D, analogs.</p>
-                        <a href="#">Photography</a>
+                        <p>Portraits. Camera: Canon EOS 400D, analog cameras.</p>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
 
@@ -63,27 +55,27 @@
                         <i class="fa fa-arrow-circle-left"></i>
                         <h2><span>Draw</span>ings</h2>
                         <p>Hand sketches and digital drawings. </p>
-                        <a href="#">Drawings</a>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="sewing">
+                <figure class="grid-figure" id="fashion">
                     <img src="images/front/sewing.jpg">
                     <figcaption>
                         <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Sew</span>ing</h2>
-                        <p>Sewing and draping.</p>
-                        <a href="#">Sewing</a>
+                        <h2><span>Fashion </span>design</h2>
+                        <p>Sewing and digital print.</p>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="prints">
-                    <img src="images/front/prints.jpg">
+                <figure class="grid-figure" id="publications">
+                    <img src="images/front/publications.jpg">
                     <figcaption>
                         <i class="fa fa-arrow-circle-left"></i>
-                        <h2>Digital <span>Prints</span></h2>
-                        <p>Projects and samples on cotton and silk.</p>
-                        <a href="#">Prints</a>
+                        <h2><span>Public</span>ations</h2>
+                        <p>On-line magazines and school publications.</p>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
 
@@ -91,37 +83,29 @@
                     <img src="images/front/moodboards.jpg">
                     <figcaption>
                         <i class="fa fa-arrow-circle-left"></i>
-                        <h2>Mood<span>boards</span></h2>
+                        <h2>Moodboards &amp; <span>PR</span></h2>
                         <p>Collages made in Adobe Creative Suite.</p>
-                        <a href="#">Photoshop & InDesign</a>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="editorials">
-                    <img src="images/front/newsletter.jpg">
+                <figure class="grid-figure" id="trends">
+                    <img src="images/front/trend.jpg">
                     <figcaption>
                         <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Edit</span>orials</h2>
-                        <p>Graphics for e-commerce website.</p>
-                        <a href="#">Photoshop & InDesign</a>
+                        <h2>Trend <span>forecast</span></h2>
+                        <p>BA project in sustainability.</p>
+                        <a href="#"></a>
                     </figcaption>
                 </figure>
-
-                <figure class="grid-figure" id="contact">
-                    <img src="images/front/projects.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2>Contact <span>me</span></h2>
-                        <p>Get in touch</p>
-                        <a href="#">Contact</a>
-                    </figcaption>
-                </figure>
-
         </div>
 
-        <div id="gallery" class="page"></div>
+        <div id="gallery" class="page">
+            <div id="gallery-desc"></div>
+            <div id="gallery-photos"></div>
+        </div>
 
-        <div id="editorials-page" class="page">
+        <div id="publications-page" class="page">
             <h1>2nd Wear <small>Sustianable project @ KEA Copenhagen, 2014</small></h1>
             <div data-configid="15441657/12194300" class="issuuembed"></div>
             <h1>Fuss Magazine <small>Graphic design final projects, Elective module @ KEA Copenhagen, 2015</small></h1>
@@ -138,15 +122,15 @@
             <form>
             	<fieldset>
 				    <label for="name">What's your name?</label>
-				    <input type="text" name="name" id="name" placeholder="John Doe"> 
+				    <input type="text" name="name" id="name" placeholder="John Doe">
 				</fieldset>
 				<fieldset>
 				    <label for="email">What's your e-mail address?</label>
-				    <input type="text" name="email" id="email" placeholder="joe@example.com"> 
+				    <input type="text" name="email" id="email" placeholder="joe@example.com">
 				</fieldset>
 				<fieldset>
 				    <label for="subject">What do you want to talk about?</label>
-				    <input type="text" name="subject" id="subject" placeholder="Subject..."> 
+				    <input type="text" name="subject" id="subject" placeholder="Subject...">
 				</fieldset>
 				<fieldset>
 				    <label for="message">Write your message here!</label>
@@ -229,7 +213,7 @@
             </div>
         </div>
         </main>
-        <footer>
+        <footer class="footer">
             Works and website by <strong><a href="mailto:dluzniewska@gmail.com">Sylwia Karolina Dłużniewska</a></strong> all rights reserved
         </footer>
 
