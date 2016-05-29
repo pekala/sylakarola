@@ -8,14 +8,12 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
+            <link rel="stylesheet" type="text/css" href="styles/photoswipe.css">
+            <link rel="stylesheet" type="text/css" href="styles/default-skin/default-skin.css">
         <!-- endbuild -->
 
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/photoswipe.css">
-        <link rel="stylesheet" type="text/css" href="styles/default-skin/default-skin.css">
         <!-- endbuild -->
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -29,265 +27,71 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="top-nav">
-            <nav>
-                <span class="top-nav--link--primary">Sylwia Karolina</span>
-                <a href="#" id="go-to-contact" class="top-nav--link--secondary">Contact</a>
-                <a href="#" id="go-to-about" class="top-nav--link--secondary">About</a>
-            </nav>
-        </div>
+        <nav class="top-nav">
+            <a class="top-nav--link--primary" href="/">Sylwia Karolina</a>
+            <a href="/contact.html" class="top-nav--link--secondary">Contact</a>
+            <a href="/about.html" class="top-nav--link--secondary">About</a>
+        </nav>
         <main>
-        <div class="grid">
-
-                <figure class="grid-figure" id="photos">
-                    <img src="images/front/photos.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Photo</span>graphy</h2>
-                        <p>Portraits. Camera: Canon EOS 400D, analog cameras.</p>
-                        <a href="#"></a>
+            <div class="grid">
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/photos.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title"><strong>Photo</strong>graphy</h1>
+                        <p class="grid--subtitle">Portraits. Camera: Canon EOS 400D, analog cameras.</p>
+                        <a href="/photos.html"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="drawings">
-                    <img src="images/front/drawings.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Draw</span>ings</h2>
-                        <p>Hand sketches and digital drawings. </p>
-                        <a href="#"></a>
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/drawings.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title"><strong>Draw</strong>ings</h1>
+                        <p class="grid--subtitle">Hand sketches and digital drawings. </p>
+                        <a href="/drawings.html"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="fashion">
-                    <img src="images/front/sewing.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Fashion </span>design</h2>
-                        <p>Sewing and digital print.</p>
-                        <a href="#"></a>
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/sewing.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title"><strong>Fashion </strong>design</h1>
+                        <p class="grid--subtitle">Sewing and digital print.</p>
+                        <a href="/fashion.html"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="publications">
-                    <img src="images/front/publications.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2><span>Public</span>ations</h2>
-                        <p>On-line magazines and school publications.</p>
-                        <a href="#"></a>
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/publications.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title"><strong>Public</strong>ations</h1>
+                        <p class="grid--subtitle">On-line magazines and school publications.</p>
+                        <a href="/publications.html"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="moodboards">
-                    <img src="images/front/moodboards.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2>Moodboards &amp; <span>PR</span></h2>
-                        <p>Collages made in Adobe Creative Suite.</p>
-                        <a href="#"></a>
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/moodboards.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title">Moodboards &amp; <strong>PR</strong></h1>
+                        <p class="grid--subtitle">Collages made in Adobe Creative Suite.</p>
+                        <a href="/moodboards.html"></a>
                     </figcaption>
                 </figure>
 
-                <figure class="grid-figure" id="trends">
-                    <img src="images/front/trend.jpg">
-                    <figcaption>
-                        <i class="fa fa-arrow-circle-left"></i>
-                        <h2>Trend <span>forecast</span></h2>
-                        <p>BA project in sustainability.</p>
-                        <a href="#"></a>
+                <figure class="grid--element">
+                    <img class="grid--image" src="images/front/trend.jpg">
+                    <figcaption class="grid--caption">
+                        <h1 class="grid--title">Trend <strong>forecast</strong></h1>
+                        <p class="grid--subtitle">BA project in sustainability.</p>
+                        <a href="/trends.html"></a>
                     </figcaption>
                 </figure>
-        </div>
-
-        <div id="gallery" class="page">
-            <div id="gallery-desc"></div>
-            <div id="gallery-photos"></div>
-        </div>
-
-        <div id="publications-page" class="page">
-            <h1>2nd Wear <small>Sustianable project @ KEA Copenhagen, 2014</small></h1>
-            <div data-configid="15441657/12194300" class="issuuembed"></div>
-            <h1>Fuss Magazine <small>Graphic design final projects, Elective module @ KEA Copenhagen, 2015</small></h1>
-            <div data-configid="15441657/12194392" class="issuuembed"></div>
-            <h1>i'mperfect <small>Sustainable signature project @KEA</small></h1>
-            <div data-configid="15441657/11651298" class="issuuembed"></div>
-            <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
-        </div>
-
-        <div id="contact-page" class="page">
-            <p>I'm always interested in exciting projects and new opportunities.</p>
-            <p>To contact me, send me an e-mail to <a href="mailto:dluzniewska@gmail.com">dluzniewska@gmail.com</a>, reach me at my Danish number <a href="tel:004550201500">+45 50 20 15 00</a> or use the form below to drop me a line. I'm looking forward to hearing from you!</p>
-
-            <form>
-            	<fieldset>
-				    <label for="name">What's your name?</label>
-				    <input type="text" name="name" id="name" placeholder="John Doe">
-				</fieldset>
-				<fieldset>
-				    <label for="email">What's your e-mail address?</label>
-				    <input type="text" name="email" id="email" placeholder="joe@example.com">
-				</fieldset>
-				<fieldset>
-				    <label for="subject">What do you want to talk about?</label>
-				    <input type="text" name="subject" id="subject" placeholder="Subject...">
-				</fieldset>
-				<fieldset>
-				    <label for="message">Write your message here!</label>
-				    <textarea id="message" placeholder="I am contacting you to..."></textarea>
-				</fieldset>
-                <fieldset>
-                    <p id="error">There was some problem while sending your message. Make sure everything is filled correctly. If nothing helps, please send an e-mail to <a href="mailto:dluzniewska@gmail.com">dluzniewska@gmail.com</a>.</p>
-                    <button type="submit">Send!</button>
-                </fieldset>
-            </form>
-        </div>
-
-
-            <div id="about-page" class="page">
-                <div class="about">
-                    <p>Sylvia Karolina Dluzniewska is a fashion design student based in Copenhagen, Denmark.
-                    Her adventure with fashion and design began almost three years ago. She completed education as Design technologist, currently lives in the world of sustainable fashion, as both her ongoing education and job focus around sustainability in the fashion industry.</p>
-                    <p>Her work primarily focuses around practical, simple solutions with a subtel touch of Scandinavian minimalism and a pinch of humour. </p>
-                    <p>Filling her days with studying, part-time job and learning Danish, she also finds time to follow her hobbies: photography, travelling and graphic design.</p>
-
-                    <a class="main-link" href="mailto:dluzniewska@gmail.com">Contact.</a>
-                    <a href="cv.pdf" class="main-link" target="_blank">Download résumé (PDF).</a>
-                    <a href="#"  class="main-link" id="show-courses" target="_blank">List of completed courses.</a>
-                </div>
-                <div class="clearfix"></div>
-            <div class="courses">
-            <div class="course-list">
-                <h3>Design</h3>
-                <ul>
-                    <li>Visual communication</li>
-                    <li>Sketching</li>
-                    <li>Croquis</li>
-                    <li>Costume history</li>
-                    <li>Fashion illustration</li>
-                    <li>Mood board</li>
-                    <li>Technical drawing</li>
-                    <li>Illustrator</li>
-                    <li>Photoshop</li>
-                    <li>InDesign</li>
-                    <li>Shape, colour, fabric</li>
-                    <li>Fibres & fabrics</li>
-                    <li>Garment construction</li>
-                    <li>Sewing technique & construction</li>
-                    <li>Graphics & layout</li>
-                    <li>Sustainable design</li>
-                    <li>Digital print</li>
-                    <li>Zero waste techniques</li>
-                    <li>Handworks workshop</li>
-                    <li>From idea to implementation</li>
-                    <li>Elective I: Draping & sewing techniques</li>
-                    <li>Elective II: Graphic design</li>
-                </ul>
             </div>
-            <div class="course-list">
-                <h3>Marketing and sourcing</h3>
-                <ul>
-                    <li>Project management</li>
-                    <li>Purchasing & logistics</li>
-                    <li>Business economics</li>
-                    <li>Sourcing</li>
-                    <li>Company & market</li>
-                    <li>Consumer behaviour</li>
-                    <li>Product development</li>
-                    <li>Survey design & methods</li>
-                    <li>Value chain</li>
-                    <li>Production methods</li>
-                </ul>
-            </div>
-            <div class="course-list">
-                <h3>Projects and Internship</h3>
-                <ul>
-                    <li>Internship at Base Range (Assistant Designer)</li>
-                    <li>Intership at Le Neu Black (Graphic Designer)</li>
-                    <li>Cross disciplinary project with the Neutral.com company, based on delogue.com system</li>
-                    <li>Trend forecast project with Black Fox</li>
-                    <li>Designing fashion collection for Le Klint</li>
-                    <li>Sustainable signature - redesign of <em>A Question Of</em></li>
-                </ul>
-            </div>
-            </div>
-        </div>
         </main>
         <footer class="footer">
             Works and website by <strong><a href="mailto:dluzniewska@gmail.com">Sylwia Karolina Dłużniewska</a></strong> all rights reserved
         </footer>
-
-
-
-
-        <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-</div>
-
-
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -300,15 +104,7 @@
             ga('create','UA-54287339-2');ga('send','pageview');
         </script>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.min.js"></script>
-
         <!-- build:js scripts/main.js -->
-        <script type="text/javascript" src="scripts/photoswipe.min.js"></script>
-        <script type="text/javascript" src="scripts/photoswipe-ui-default.min.js"></script>
-        <script type="text/javascript" src="scripts/initGallery.js"></script>
-        <script src="scripts/galleries.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

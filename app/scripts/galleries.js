@@ -1,7 +1,21 @@
 var galleries = {};
 window.galleries = galleries;
-window.galleryDesc = {
-    trends: '<p>Abraham Lincoln once said that the best way to predict future is to create it.</p> <p>Trend forecasters are in the right place to shape the future. Having in mind, and by trying to find a solution the contemporary problems of unethically made clothing and environmentally-destructive actions of fashion industry, the Curious Narrator was created.</p> <p>The core idea of the Curious Narrator is to present sustainability in a context a trend forecast. The idea behind it is to create a sustainable trend forecast without unnecessary words and definitions, in a visual and inspiring way.</p>'
+
+window.setGallery = function(photos, container) {
+    var nodes = [];
+    photos.forEach(function (photo) {
+        var figure = document.createElement('figure');
+        figure.classList.add('grid--element', 'grid--element__gallery')
+        figure.innerHTML =
+            '<a href="' + photo.src + '" data-size="' + photo.width + 'x' + photo.height + '">' +
+            '<img class="grid--image" src="' + photo.thumb + '" alt="' + photo.desc + '" />' +
+            '</a>' +
+            '<figcaption><strong>' + photo.caption + '</strong> ' + photo.desc + '</figcaption>';
+        nodes.push(figure);
+    });
+    nodes.forEach(function(node) {
+        container.appendChild(node);
+    })
 };
 
 galleries.photos = [{
