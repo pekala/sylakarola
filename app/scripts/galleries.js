@@ -8,7 +8,7 @@ window.setGallery = function(photos, container) {
         figure.classList.add('grid--element', 'grid--element__gallery')
         figure.innerHTML =
             '<a href="' + photo.src + '" data-size="' + photo.width + 'x' + photo.height + '">' +
-            '<img class="grid--image" src="' + photo.thumb + '" alt="' + photo.desc + '" />' +
+            '<img class="grid--thumbnail" src="' + photo.thumb + '" alt="' + photo.desc + '" />' +
             '</a>' +
             '<figcaption><strong>' + photo.caption + '</strong> ' + photo.desc + '</figcaption>';
         nodes.push(figure);

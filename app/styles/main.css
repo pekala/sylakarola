@@ -11,7 +11,7 @@
   line-height: 60px;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #272727;
   letter-spacing: 3px;
   font-weight: bold;
   padding: 0 20px;
@@ -67,8 +67,8 @@
 
 .grid--element {
   width: 33.33333%;
-  height: 40vh;
   min-height: 300px;
+  min-height: 42vh;
   overflow: hidden;
   margin: 0;
   position: relative;
@@ -127,37 +127,39 @@
   margin-bottom: 10px;
 }
 .grid--intro p {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  line-height: 1.3em;
 }
 @media screen and (max-width: 60em) {
   .grid--intro p {
     font-size: 1.1em;
   }
 }
-@media screen and (max-width: 50em) {
-  .grid--intro p {
-    font-size: 1em;
-  }
-}
-@media screen and (max-width: 40em) {
-  .grid--intro p {
-    font-size: 1.1em;
-  }
-}
 
 .grid--image {
-  min-width: 100%;
-  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: .8;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.grid--image img {
+  min-width: 100%;
 }
 .grid--element:hover .grid--image, .grid--element.is-active .grid--image {
   opacity: .4;
 }
-.grid--element__gallery .grid--image {
-  opacity: 1;
+
+.grid--thumbnail {
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
 }
-.grid--element__gallery:hover .grid--image {
+.grid--element:hover .grid--thumbnail {
+  opacity: .4;
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
@@ -266,11 +268,10 @@ html.touch .grid--subtitle {
 body {
   background: white;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: black;
+  color: #272727;
   font-weight: 300;
   padding: 0;
   margin: 0;
-  padding-bottom: 40px;
 }
 
 a {
@@ -301,4 +302,54 @@ html {
 
 main {
   margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+.publication--element {
+  padding: 30px;
+  font-size: 0.9em;
+  background: white;
+  color: #272727;
+  width: 33.3333%;
+}
+.publication--element h1, .publication--element h2 {
+  margin: 0 0 15px;
+}
+@media screen and (max-width: 80em) {
+  .publication--element {
+    width: 100%;
+  }
+}
+
+.courses--element {
+  padding: 30px;
+  font-size: 1.1em;
+  background: white;
+  color: #272727;
+}
+.courses--element ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+.courses--element li {
+  margin-bottom: 10px;
+}
+.courses--element h3 {
+  margin: 0 0 15px;
+}
+@media screen and (max-width: 60em) {
+  .courses--element {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 50em) {
+  .courses--element {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .courses--element {
+    font-size: 1.1em;
+  }
 }
