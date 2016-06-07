@@ -2,6 +2,16 @@
   "name": "sylakarola",
   "version": "0.0.0",
   "dependencies": {},
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch",
+    "postbuild": "npm run opt-images",
+    "opt-images": "find dist/images -name \"*.jpg\" -type f -exec jpegtran -copy none -progressive -outfile {} {} \\;",
+    "predeploy": "npm run build",
+    "deploy": "surge --project ./dist --domain sylwiakarolina.com",
+    "clean": "gulp clean",
+    "distclean": "npm run clean && rm -rf node_modules"
+  },
   "devDependencies": {
     "bower": "^1.4.1",
     "connect": "^2.14.4",

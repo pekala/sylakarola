@@ -5,6 +5,7 @@ var gridElements = document.getElementsByClassName('grid--element');
 function onGridElementClicked(e) {
     var el = this;
     e.preventDefault();
+    window.scrollTo(0,0);
 
     function moveX(startX, endX) {
         el.style.left = endX;
@@ -37,8 +38,8 @@ function onGridElementClicked(e) {
     }
 
     var first = this.getBoundingClientRect();
-    this.style.left = first.left;
-    this.style.top = first.top;
+    this.style.left = first.left + 'px';
+    this.style.top = first.top + 'px';
     this.style.position = 'absolute';
 
     if (first.left !== 0) {
